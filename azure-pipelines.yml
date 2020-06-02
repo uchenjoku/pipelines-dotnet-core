@@ -15,3 +15,9 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: '56f7f557-b595-40d4-8d6a-736d6e23b85e'
+    appName: 'PipelineDeployTestApp'
+    package: $(System.DefaultWorkingDirectory)/**/*.zip 
