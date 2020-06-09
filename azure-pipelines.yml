@@ -18,7 +18,7 @@ steps:
 
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: 'Visual Studio Enterprise'
+    azureSubscription: '56f7f557-b595-40d4-8d6a-736d6e23b85e'
     appType: webApp
     appName: 'PipelineDeployTestApp'
     package: $(System.DefaultWorkingDirectory)/**/*.zip 
